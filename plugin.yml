@@ -1,0 +1,22 @@
+name: ZeusMode
+version: 0.0.1
+main: thenewherobrine.zeusmode.Main
+author: TheNewHEROBRINE
+
+commands:
+ zeusmode:
+  description: "Toggle ZeusMode"
+  usage: "/zeusmode <on|off> [ticks]"
+  permission: zeusmode.command.zeusmode
+  
+permissions:
+ zeusmode.*:
+  children:
+   zeusmode.command.*: true
+ 
+ zeusmode.command.*:
+  children:
+   zeusmode.command.zeusmode: true
+ 
+ zeusmode.command.zeusmode:
+  default: op
