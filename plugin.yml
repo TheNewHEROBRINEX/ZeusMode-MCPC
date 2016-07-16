@@ -1,5 +1,5 @@
 name: ZeusMode
-version: 0.1.0
+version: 0.2.0
 main: thenewherobrine.zeusmode.Main
 author: TheNewHEROBRINE
 
@@ -9,6 +9,11 @@ commands:
   usage: "/zeusmode <on|off> [ticks]"
   permission: zeusmode.command.zeusmode
   
+ lightning:
+  description: "strike a lightning"
+  usage: "/lightning [player] or /lightning <x> <y> <z> [world]"
+  permission: zeusmode.command.lightning
+  
 permissions:
  zeusmode.*:
   children:
@@ -17,6 +22,10 @@ permissions:
  zeusmode.command.*:
   children:
    zeusmode.command.zeusmode: true
+   zeusmode.command.lightning: true
  
  zeusmode.command.zeusmode:
+  default: op
+  
+  zeusmode.command.lightning:
   default: op
